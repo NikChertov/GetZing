@@ -1,0 +1,524 @@
+// Подключение шрифтов
+// &display=swap
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import "fonts";
+//<Шрифт по умолчанию>==========================================================================================
+$fontFamily: "NeueMachina";
+$fontFamily2: "Montserrat", sans-serif;
+$fontSize: 16px;
+//</Шрифт по умолчанию>==========================================================================================
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1440;
+$maxWidthContainer: 1350;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+@import "variables";
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+//</ОБОЛОЧКА>===========================================================================================================
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+._container {
+	max-width: $maxWidthContainer + px;
+	padding: 0px 15px;
+	margin: 0 auto;
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================
+@import "reset";
+@import "header";
+@import "footer";
+@import "ui";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>===================================================================
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+body {
+    height: 100%;
+	font-family: $fontFamily;
+	font-size: $fontSize;
+	color: $first-color;
+    font-weight: 200;
+	background: $back-color;
+}
+main {
+	flex: 1 1 auto;
+}
+// <PROMO>
+.promo {
+	margin-top: 150px;
+	padding-bottom: 85px;
+	@media (max-width: $md3 + px ) {
+		padding-bottom: 185px;
+	}
+	@media (max-width: $md4 + px ) {
+		padding-bottom: 55px;
+	}
+}
+.promo__container {
+	position: relative;
+}
+.promo__title {
+	padding-top: 60px;
+	@media (max-width: $md3 + px ) {
+		padding-top: 0px;
+	}
+	@media (max-width: $md4 + px ) {
+		padding-top: 320px;
+	}
+ }
+.promo__text {
+	margin-top: 12px;
+	font-family: $fontFamily2;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 150%;
+}
+.promo__button {
+	margin-top: 40px;
+}
+.promo__track {
+	width: calc((208/1440)*100%);
+	min-width: 100px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	@media (max-width: $md3 + px ) {
+		min-width: 130px;
+		top: 0%;
+		right: 5%;
+	}
+	@media (max-width: $md4 + px ) {
+		top: -13%;
+		right: 15%;
+	}
+	@media (max-width: 374.8px ) {
+		right: 10%;
+	}
+}
+.promo__main {
+	width: calc((400/1440)*100%);
+	min-width: 153px;
+	position: absolute;
+	top: 45%;
+	right: 18%;
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	@media (max-width: $md3 + px ) {
+		top: 60%;
+		right: 25%;
+	}
+	@media (max-width: $md4 + px ) {
+		top: 0;
+		right: 60%;
+	}
+	@media (max-width: 374.98px ) {
+		top: 0;
+		right: 55%;
+	}
+}
+.promo__get {
+	width: calc((210/1440)*100%);
+	min-width: 104px;
+	position: absolute;
+	top: 140%;
+	left: 25%;
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	@media (max-width: $md3 + px ) {
+		min-width: 130px;
+		top: 140%;
+		left: 15%;
+	}
+	@media (max-width: $md4 + px ) {
+		min-width: 130px;
+		top: 40%;
+		left: 55%;
+	}
+}
+// </PROMO>
+// <ABOUT>
+.about {
+	margin-top: 340px;
+	background-color: $second-back-color;
+	padding: 163px 0px;
+	@media (max-width: $md2 + px ) {
+		margin-top: 200px;
+	}
+	@media (max-width: $md3 + px ) {
+		margin-top: 70px;
+	}
+	@media (max-width: $md4 + px ) {
+		padding: 63px 0px;
+	}
+}
+.about__text {
+	margin: 10px 0px 0px 48px;
+	p{
+		font-family: $fontFamily;
+		font-weight: 400;
+		font-size: 42px;
+		line-height: 130%;
+		color: $second-color;
+	}
+	@media (max-width: 1100px ) {
+		p {
+			font-size: 37px;
+		}
+	}
+	@media (max-width: $md2 + px ) {
+		p {
+			font-size: 30px;
+		}
+	}
+	@media (max-width: $md3 + px ) {
+		margin-left: 0px;
+	}
+	@media (max-width: $md4 + px ) {
+		p {
+			font-size: 19px;
+		}
+	}
+}
+.about__sub-text {
+	p{
+		font-family: $fontFamily;
+		font-weight: 700;
+		font-size: 42px;
+		line-height: 130%;
+		color: $second-color;
+		text-align: end;
+	}
+	@media (max-width: 1100px ) {
+		p {
+			font-size: 37px;
+		}
+	}
+	@media (max-width: $md2 + px ) {
+		p {
+			font-size: 24px;
+		}
+	}
+	@media (max-width: $md4 + px ) {
+		p {
+			font-size: 19px;
+		}
+	}
+	@media (max-width: 380px ) {
+		p {
+			font-size: 16px;
+		}
+	}
+}
+// </ABOUT>
+// <ADVANTAGES>
+.advantages {
+	padding-top: 100px;
+}
+.advantages__body{
+	position: relative;
+}
+.advantages__title {
+	position: absolute;
+	top: -32px;
+	left: -80px;
+	z-index: 10;
+	color: #ffffff;
+	@media (max-width: 1100px ) {
+		top: -50px;
+		left: -15px;
+	}
+	@media (max-width: $md2 + px ) {
+		top: -32px;
+	}
+	@media (max-width: $md4 + px ) {
+		top: -27px;
+	}
+}
+.advantages__image{
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.advantages__menu {
+	margin: 175px 180px;
+	@media (max-width: $md3 + px ) {
+		display: none;
+	}
+}
+.menu__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 210px;
+}
+.menu__item {
+	min-height: 220px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	p {
+		text-align: center;
+		font-family: $fontFamily2;
+		font-weight: 400;
+		font-size: $fontSize;
+		line-height: 150%;
+		color: $second-back-color;
+		span {
+			color: #ffffff;
+		}
+	}
+}
+.menu__image {
+	min-width: 150px;
+	min-height: 100px;
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+.sub-menu {
+	margin-top: 65px;
+	display: none;
+	@media (max-width: $md3 + px ) {
+		display: block;
+	}
+}
+.sub-menu__item	{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 50px;
+	p {
+		font-family: $fontFamily2;
+		font-weight: 400;
+		font-size: $fontSize;
+		line-height: 150%;
+		color: $second-back-color;
+		span {
+			color: #ffffff;
+		}
+	}
+}
+.sub-menu__image {
+	min-width: 150px;
+	min-height: 100px;
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+// </ADVANTAGES>
+// <OFFERS>
+.offers {
+	background: $second-back-color;
+}
+.offers__image{
+	padding: 26px 0px;
+	min-height: 140px;
+	background: repeat-x url('@img/offers.png') $orange-color;
+	background-position-y: center;
+}
+.offers__table{
+	width: 100%;
+	margin: 30px 80px 0px 0px;
+	p {
+		font-family: $fontFamily2;
+		font-weight: 600;
+		font-size: $fontSize;
+		line-height: 150%;
+		color: #000000;
+	}
+	span{
+		font-family: $fontFamily2;
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 130%;
+		color: #000000;
+	}
+	td {
+		position: relative;
+		padding: 30px 0px;
+		&::before{
+			position: absolute;
+			content: '';
+			top: 0;
+			left: -300px;
+			width: 100vw;
+			height: 2px;
+			background-color: $first-color;
+		}
+	}
+	@media (max-width: $md3 + px ){
+		display: none;
+	}
+}
+.table__main {
+	td {
+		padding-top: 0;
+		&::before{
+			position: absolute;
+			content: '';
+			top: 0;
+			left: -300px;
+			width: 100vw;
+			height: 1px;
+			background-color: $second-back-color;
+		}
+	}
+	p{
+		color: $orange-color;
+	}
+}
+.offers__carts {
+	display: none;
+	padding: 50px 0px;
+	@media (max-width: $md3 + px ){
+		display: block;
+	}
+}
+.cart-white {
+	background-color: $first-color;
+	border: 2px solid $first-color;
+	.cart__list {
+		border-bottom: 2px solid #000000;
+	}
+}
+// </OFFERS>
+// <CONTACTS>
+.contact {
+	background-color: $third-back-color;
+	padding-top: 37px;
+}
+.contact__kyiv {
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	&:after {
+		position: absolute;
+		content: '';
+		bottom: 0;
+		left: -400px;
+		width: 200vw;
+		height: 1px;
+		background-color: #000000;
+	}
+	@media (max-width: $md3 + px ) {
+		display: block;
+		&:after {
+			height: 0;
+		}
+	}
+}
+.kyiv__info {
+	padding-bottom: 50px;
+}
+.contact__kharkiv {
+	padding-top: 40px;
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: $md3 + px ) {
+		display: block;
+	}
+}
+.kharkiv__info {
+	padding-bottom: 50px;
+}
+.contact__news {
+	display: flex;
+	@media (max-width: $md3 + px ){
+		display: block;
+	}
+}
+.contact__image{
+	width: 47%;
+	img{
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	@media (max-width: 1024px ){
+		width: 45.2%;
+	}
+	@media (max-width: $md3 + px ){
+		padding: 0px 15px 0px 15px;
+		height: 300px;
+		width: 100%;
+	}
+	@media (max-width: $md4 + px ){
+		height: 160px;
+	}
+}
+.contact__form{
+	position: relative;
+	min-width: 700px;
+	padding: 110px 0px 110px 140px;
+	form{
+		margin-top: 36px;
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid #000000;
+		input{
+			width: 100%;
+			background-color: $third-back-color;
+		}
+		button {
+			padding-bottom: 5px;
+		}
+	}
+	&::before{
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 200%;
+		height: 1px;
+		background-color: #000000;
+	}
+	@media (max-width: 1024px ){
+		min-width: 500px;
+	}
+	@media (max-width: $md3 + px ){
+		padding: 30px 15px 40px 15px;
+		&::before{
+			height: 0px;
+		}
+		min-width: 300px;
+	}
+	@media (max-width: $md4 + px ){
+		padding: 30px 15px 40px 15px;
+		&::before{
+			height: 0px;
+		}
+		min-width: 100px;
+	}
+}
+// </CONTACTS>
+//</ОСНОВНОЙ БЛОК>===================================================================================================
